@@ -1,0 +1,1010 @@
+```html
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anca Mart - Kalkulator Joki Rank MLBB Murah & Aman</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans & Rajdhani (Esports feel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        esports: ['"Rajdhani"', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            950: '#070913',
+                            900: '#0B0F1F',
+                            800: '#12182F',
+                            700: '#1B2342',
+                        },
+                        neon: {
+                            blue: '#00E5FF',
+                            purple: '#9D4EDD',
+                            gold: '#FFB703',
+                        }
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 20px rgba(0, 229, 255, 0.25)',
+                        'neon-purple': '0 0 20px rgba(157, 78, 221, 0.25)',
+                        'neon-gold': '0 0 25px rgba(255, 183, 3, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar & Subtle Effects */
+        body {
+            background-color: #070913;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(157, 78, 221, 0.14) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(255, 183, 3, 0.08) 0%, transparent 45%);
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(18, 24, 47, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 229, 255, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 229, 255, 0.25);
+        }
+        /* Custom select arrow */
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.75rem center;
+            background-repeat: no-repeat;
+            background-size: 1.25em 1.25em;
+        }
+    </style>
+</head>
+<body class="text-slate-100 antialiased min-h-screen flex flex-col selection:bg-neon-blue selection:text-dark-950">
+
+    <!-- Navbar Sticky -->
+    <header class="sticky top-0 z-40 glass-card border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-blue via-neon-purple to-pink-500 p-[2px] shadow-neon-blue">
+                    <div class="w-full h-full bg-dark-900 rounded-[10px] flex items-center justify-center">
+                        <span class="font-esports font-bold text-xl bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">AM</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-esports font-bold text-xl tracking-wider text-white block leading-none">ANCA MART</span>
+                    <span class="text-[10px] font-semibold tracking-widest text-neon-blue uppercase">Joki Rank MLBB</span>
+                </div>
+            </a>
+
+            <!-- Quick Nav Actions -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="#harga" class="hidden sm:inline-block text-sm font-medium text-slate-300 hover:text-neon-blue px-3 py-2 transition">Daftar Harga</a>
+                <a href="#kalkulator" class="hidden sm:inline-block text-sm font-medium text-slate-300 hover:text-neon-blue px-3 py-2 transition">Kalkulator</a>
+                <a href="https://wa.me/6283193617371?text=Halo%20Admin%20Anca%20Mart,%20saya%20mau%20tanya%20seputar%20joki%20rank%20MLBB." target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-400 border border-emerald-500/30 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Chat Admin</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-10 pb-8 sm:pt-14 sm:pb-12 px-4 sm:px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center">
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-800/90 border border-neon-gold/30 text-neon-gold text-xs sm:text-sm font-semibold mb-5 shadow-neon-gold">
+                <i class="fa-solid fa-shield-halved text-neon-gold"></i>
+                <span>Murah, Aman, &amp; Fast Proses 100% Terpercaya</span>
+            </div>
+
+            <h1 class="font-esports text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-tight text-white leading-tight mb-4">
+                ANCA MART — <span class="bg-gradient-to-r from-neon-blue via-purple-400 to-neon-gold bg-clip-text text-transparent">JOKI RANK MLBB</span>
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-7 leading-relaxed">
+                Push rank impianmu tanpa pusing lose streak! Hitung estimasi biaya joki bintang secara otomatis, transparan, dan langsung terhubung ke WhatsApp Admin.
+            </p>
+
+            <!-- Feature Pills -->
+            <div class="flex flex-wrap justify-center gap-2.5 sm:gap-4 text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-2 bg-dark-800/70 border border-white/10 px-3.5 py-2 rounded-xl">
+                    <i class="fa-solid fa-bolt text-neon-blue"></i>
+                    <span>Dikerjakan Pro Player</span>
+                </div>
+                <div class="flex items-center gap-2 bg-dark-800/70 border border-white/10 px-3.5 py-2 rounded-xl">
+                    <i class="fa-solid fa-lock text-neon-purple"></i>
+                    <span>Privasi Akun Aman</span>
+                </div>
+                <div class="flex items-center gap-2 bg-dark-800/70 border border-white/10 px-3.5 py-2 rounded-xl">
+                    <i class="fa-solid fa-star text-neon-gold"></i>
+                    <span>Bisa Request Hero</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daftar Harga (Price List Cards) -->
+    <section id="harga" class="py-6 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-2">
+                <div>
+                    <h2 class="font-esports text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide flex items-center gap-2.5">
+                        <span class="w-1.5 h-7 bg-gradient-to-b from-neon-blue to-neon-purple rounded-full inline-block"></span>
+                        Daftar Harga Joki Per Bintang
+                    </h2>
+                    <p class="text-slate-400 text-xs sm:text-sm mt-1">Klik kartu paket di bawah untuk langsung memilih tier di kalkulator.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Tier 1: Master - Epic -->
+                <div onclick="quickSelectTier('master_epic')" class="cursor-pointer glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-cyan-500/20"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl">
+                            <i class="fa-solid fa-shield"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">Tier Awal</span>
+                    </div>
+                    <h3 class="font-esports text-xl font-bold text-white uppercase tracking-wide">Master - Epic</h3>
+                    <p class="text-xs text-slate-400 mt-0.5 mb-4">Master IV-I, GM V-I, Epic V-I</p>
+                    <div class="pt-3 border-t border-white/10 flex items-baseline gap-1">
+                        <span class="text-2xl font-extrabold text-neon-blue">Rp 3.000</span>
+                        <span class="text-xs text-slate-400 font-medium">/ star</span>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Legends -->
+                <div onclick="quickSelectTier('legend')" class="cursor-pointer glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-amber-500/20"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 border border-amber-500/20">Populer</span>
+                    </div>
+                    <h3 class="font-esports text-xl font-bold text-white uppercase tracking-wide">Legends</h3>
+                    <p class="text-xs text-slate-400 mt-0.5 mb-4">Legend V sampai Legend I</p>
+                    <div class="pt-3 border-t border-white/10 flex items-baseline gap-1">
+                        <span class="text-2xl font-extrabold text-amber-400">Rp 5.000</span>
+                        <span class="text-xs text-slate-400 font-medium">/ star</span>
+                    </div>
+                </div>
+
+                <!-- Tier 3: Mythic Romawi -->
+                <div onclick="quickSelectTier('mythic_romawi')" class="cursor-pointer glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-purple-500/20"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-solid fa-dragon"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-purple-500/10 text-purple-300 border border-purple-500/20">Mythic</span>
+                    </div>
+                    <h3 class="font-esports text-xl font-bold text-white uppercase tracking-wide">Mythic Romawi</h3>
+                    <p class="text-xs text-slate-400 mt-0.5 mb-4">Mythic 1-24 &amp; Honor 25-49 ★</p>
+                    <div class="pt-3 border-t border-white/10 flex items-baseline gap-1">
+                        <span class="text-2xl font-extrabold text-purple-400">Rp 10.000</span>
+                        <span class="text-xs text-slate-400 font-medium">/ star</span>
+                    </div>
+                </div>
+
+                <!-- Tier 4: Mythical Glory -->
+                <div onclick="quickSelectTier('mythical_glory')" class="cursor-pointer glass-card glass-card-hover rounded-2xl p-5 relative overflow-hidden group border-neon-gold/30">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-yellow-500/15 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-yellow-500/25"></div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/15 border border-yellow-500/40 flex items-center justify-center text-neon-gold text-xl shadow-neon-gold">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-lg bg-yellow-500/15 text-neon-gold border border-yellow-500/30">Top Tier</span>
+                    </div>
+                    <h3 class="font-esports text-xl font-bold text-white uppercase tracking-wide">Mythical Glory</h3>
+                    <p class="text-xs text-slate-400 mt-0.5 mb-4">Mythical Glory 50+ Bintang</p>
+                    <div class="pt-3 border-t border-white/10 flex items-baseline gap-1">
+                        <span class="text-2xl font-extrabold text-neon-gold">Rp 15.000</span>
+                        <span class="text-xs text-slate-400 font-medium">/ star</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Calculator Section -->
+    <main id="kalkulator" class="py-8 px-4 sm:px-6 flex-grow">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-6">
+                <h2 class="font-esports text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide flex items-center gap-2.5">
+                    <span class="w-1.5 h-7 bg-gradient-to-b from-neon-gold to-neon-blue rounded-full inline-block"></span>
+                    Kalkulator Joki Rank Pintar
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Pilih mode perhitungan di bawah ini untuk menghitung total biaya joki secara akurat.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                <!-- Left Column: Form Input & Mode Switcher (7 cols) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Mode Switcher Tabs -->
+                    <div class="glass-card p-1.5 rounded-2xl grid grid-cols-2 gap-1.5">
+                        <button type="button" id="tab-rank-to-rank" onclick="switchMode('rank_to_rank')" 
+                                class="py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-neon-blue to-neon-purple text-dark-950 shadow-neon-blue">
+                            <i class="fa-solid fa-route"></i>
+                            <span>Rank ke Rank</span>
+                        </button>
+                        <button type="button" id="tab-per-star" onclick="switchMode('per_star')" 
+                                class="py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-white/5">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Eceran / Per Bintang</span>
+                        </button>
+                    </div>
+
+                    <!-- MODE A: Rank ke Rank -->
+                    <div id="panel-rank-to-rank" class="glass-card rounded-2xl p-5 sm:p-6 space-y-6">
+                        <!-- Rank Awal -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 text-neon-blue font-bold text-sm uppercase tracking-wider">
+                                <span class="w-6 h-6 rounded-lg bg-neon-blue/15 border border-neon-blue/30 flex items-center justify-center text-xs">1</span>
+                                <span>Rank &amp; Bintang Awal (Saat Ini)</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label for="start-rank" class="block text-xs text-slate-400 mb-1.5 font-medium">Pilih Rank Awal</label>
+                                    <select id="start-rank" onchange="handleStartRankChange()" class="w-full bg-dark-900 border border-white/15 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                        <!-- Populated by JS -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label id="start-star-label" for="start-star" class="block text-xs text-slate-400 mb-1.5 font-medium">Bintang Awal</label>
+                                    <div id="start-star-wrapper">
+                                        <!-- Dynamic Select or Number Input -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider Arrow -->
+                        <div class="relative flex items-center justify-center">
+                            <div class="border-t border-white/10 w-full"></div>
+                            <div class="bg-dark-800 border border-white/15 text-neon-purple w-9 h-9 rounded-full flex items-center justify-center shrink-0 mx-3 shadow-neon-purple">
+                                <i class="fa-solid fa-arrow-down text-sm"></i>
+                            </div>
+                            <div class="border-t border-white/10 w-full"></div>
+                        </div>
+
+                        <!-- Rank Tujuan -->
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 text-neon-gold font-bold text-sm uppercase tracking-wider">
+                                <span class="w-6 h-6 rounded-lg bg-neon-gold/15 border border-neon-gold/30 flex items-center justify-center text-xs">2</span>
+                                <span>Rank &amp; Bintang Tujuan (Target)</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label for="target-rank" class="block text-xs text-slate-400 mb-1.5 font-medium">Pilih Rank Tujuan</label>
+                                    <select id="target-rank" onchange="handleTargetRankChange()" class="w-full bg-dark-900 border border-white/15 focus:border-neon-gold focus:ring-1 focus:ring-neon-gold rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                        <!-- Populated by JS -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label id="target-star-label" for="target-star" class="block text-xs text-slate-400 mb-1.5 font-medium">Bintang Tujuan</label>
+                                    <div id="target-star-wrapper">
+                                        <!-- Dynamic Select or Number Input -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Validation Warning Message Box -->
+                        <div id="rank-error-box" class="hidden p-3.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 text-xs sm:text-sm flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-exclamation text-rose-400 mt-0.5"></i>
+                            <span id="rank-error-text">Rank tujuan harus lebih tinggi daripada rank awal!</span>
+                        </div>
+                    </div>
+
+                    <!-- MODE B: Hitung Eceran / Per Bintang -->
+                    <div id="panel-per-star" class="hidden glass-card rounded-2xl p-5 sm:p-6 space-y-5">
+                        <div class="flex items-center gap-2 text-neon-blue font-bold text-sm uppercase tracking-wider">
+                            <span class="w-6 h-6 rounded-lg bg-neon-blue/15 border border-neon-blue/30 flex items-center justify-center text-xs">1</span>
+                            <span>Pilih Tier &amp; Jumlah Bintang Eceran</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="eceran-tier" class="block text-xs text-slate-400 mb-1.5 font-medium">Kategori Tier Saat Ini</label>
+                                <select id="eceran-tier" onchange="calculateAll()" class="w-full bg-dark-900 border border-white/15 focus:border-neon-blue rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                                    <option value="master_epic">Master - Epic (Rp 3.000 / star)</option>
+                                    <option value="legend">Legends (Rp 5.000 / star)</option>
+                                    <option value="mythic_romawi">Mythic Romawi &amp; Honor 1-49★ (Rp 10.000 / star)</option>
+                                    <option value="mythical_glory">Mythical Glory 50+★ (Rp 15.000 / star)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="eceran-stars" class="block text-xs text-slate-400 mb-1.5 font-medium">Jumlah Bintang Order</label>
+                                <div class="flex items-center">
+                                    <button type="button" onclick="adjustEceranStars(-1)" class="w-11 h-11 rounded-l-xl bg-dark-900 border border-r-0 border-white/15 hover:bg-white/10 text-white font-bold transition">-</button>
+                                    <input type="number" id="eceran-stars" value="5" min="1" max="500" oninput="calculateAll()" class="w-full h-11 bg-dark-900 border-y border-white/15 text-center text-white font-bold text-sm outline-none">
+                                    <button type="button" onclick="adjustEceranStars(1)" class="w-11 h-11 rounded-r-xl bg-dark-900 border border-l-0 border-white/15 hover:bg-white/10 text-white font-bold transition">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Star Chips -->
+                        <div>
+                            <span class="block text-xs text-slate-400 mb-2">Pilih Cepat Jumlah Bintang:</span>
+                            <div class="flex flex-wrap gap-2">
+                                <button type="button" onclick="setEceranStars(3)" class="px-3 py-1.5 rounded-lg bg-dark-900 hover:bg-neon-blue/20 border border-white/10 hover:border-neon-blue/40 text-xs font-semibold text-slate-300 hover:text-neon-blue transition">+3 Bintang</button>
+                                <button type="button" onclick="setEceranStars(5)" class="px-3 py-1.5 rounded-lg bg-dark-900 hover:bg-neon-blue/20 border border-white/10 hover:border-neon-blue/40 text-xs font-semibold text-slate-300 hover:text-neon-blue transition">+5 Bintang</button>
+                                <button type="button" onclick="setEceranStars(10)" class="px-3 py-1.5 rounded-lg bg-dark-900 hover:bg-neon-blue/20 border border-white/10 hover:border-neon-blue/40 text-xs font-semibold text-slate-300 hover:text-neon-blue transition">+10 Bintang</button>
+                                <button type="button" onclick="setEceranStars(15)" class="px-3 py-1.5 rounded-lg bg-dark-900 hover:bg-neon-blue/20 border border-white/10 hover:border-neon-blue/40 text-xs font-semibold text-slate-300 hover:text-neon-blue transition">+15 Bintang</button>
+                                <button type="button" onclick="setEceranStars(25)" class="px-3 py-1.5 rounded-lg bg-dark-900 hover:bg-neon-blue/20 border border-white/10 hover:border-neon-blue/40 text-xs font-semibold text-slate-300 hover:text-neon-blue transition">+25 Bintang</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opsi Tambahan & Data Order -->
+                    <div class="glass-card rounded-2xl p-5 sm:p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-purple-400 font-bold text-sm uppercase tracking-wider">
+                                <span class="w-6 h-6 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-xs">3</span>
+                                <span>Data Akun &amp; Request (Opsional)</span>
+                            </div>
+                            <span class="text-[11px] text-slate-400">Otomatis masuk ke format WA</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="input-nickname" class="block text-xs text-slate-400 mb-1.5 font-medium">Nickname / ID (Server)</label>
+                                <input type="text" id="input-nickname" oninput="updateOrderPreview()" placeholder="Contoh: AncaPro / 12345678 (2021)" 
+                                       class="w-full bg-dark-900 border border-white/15 focus:border-neon-purple rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="input-login" class="block text-xs text-slate-400 mb-1.5 font-medium">Login Via</label>
+                                <select id="input-login" onchange="updateOrderPreview()" class="w-full bg-dark-900 border border-white/15 focus:border-neon-purple rounded-xl px-3.5 py-2.5 text-sm text-white outline-none transition">
+                                    <option value="Moonton">Moonton</option>
+                                    <option value="TikTok">TikTok</option>
+                                    <option value="VK">VK</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Google Play">Google Play</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="input-hero" class="block text-xs text-slate-400 mb-1.5 font-medium">Request Hero (Opsional)</label>
+                                <input type="text" id="input-hero" oninput="updateOrderPreview()" placeholder="Contoh: Ling, Fanny, Hayabusa / Bebas" 
+                                       class="w-full bg-dark-900 border border-white/15 focus:border-neon-purple rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition">
+                            </div>
+
+                            <div>
+                                <label for="input-notes" class="block text-xs text-slate-400 mb-1.5 font-medium">Catatan Tambahan</label>
+                                <input type="text" id="input-notes" oninput="updateOrderPreview()" placeholder="Contoh: Main malam / Jangan pakai hero X" 
+                                       class="w-full bg-dark-900 border border-white/15 focus:border-neon-purple rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Summary & Checkout (5 cols) -->
+                <div class="lg:col-span-5 lg:sticky lg:top-24 space-y-4">
+                    <div class="glass-card rounded-2xl p-5 sm:p-6 border-neon-blue/30 shadow-neon-blue relative overflow-hidden">
+                        <!-- Decorative Top Accent Bar -->
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-gold"></div>
+
+                        <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                            <div>
+                                <h3 class="font-esports text-xl font-bold text-white uppercase tracking-wide">Rincian Estimasi Order</h3>
+                                <p class="text-xs text-slate-400">Anca Mart — Joki Rank Murah &amp; Aman</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-neon-blue/10 border border-neon-blue/30 flex items-center justify-center text-neon-blue">
+                                <i class="fa-solid fa-receipt text-lg"></i>
+                            </div>
+                        </div>
+
+                        <!-- Route Summary -->
+                        <div class="py-4 border-b border-white/10 space-y-2.5">
+                            <div class="flex justify-between items-start gap-2 text-xs sm:text-sm">
+                                <span class="text-slate-400 shrink-0">Mode Order:</span>
+                                <span id="summary-mode" class="font-semibold text-white text-right">Rank ke Rank</span>
+                            </div>
+                            <div class="flex justify-between items-start gap-2 text-xs sm:text-sm">
+                                <span class="text-slate-400 shrink-0">Detail Target:</span>
+                                <span id="summary-route" class="font-semibold text-neon-blue text-right">Epic II (★3) ➔ Legend IV (★2)</span>
+                            </div>
+                            <div class="flex justify-between items-center text-xs sm:text-sm">
+                                <span class="text-slate-400">Total Bintang Ditempuh:</span>
+                                <span class="inline-flex items-center gap-1.5 font-bold text-neon-gold bg-neon-gold/10 border border-neon-gold/25 px-2.5 py-0.5 rounded-lg">
+                                    <i class="fa-solid fa-star text-xs"></i>
+                                    <span id="summary-total-stars">0 Bintang</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Transparent Tier Breakdown -->
+                        <div class="py-4 border-b border-white/10">
+                            <span class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">Rincian Biaya Lintas Tier:</span>
+                            <div id="breakdown-list" class="space-y-2 text-xs sm:text-sm">
+                                <!-- Dynamic breakdown items -->
+                            </div>
+                        </div>
+
+                        <!-- Total Price Display -->
+                        <div class="pt-4 pb-5">
+                            <div class="flex items-baseline justify-between">
+                                <span class="text-sm font-medium text-slate-300">Total Estimasi Biaya</span>
+                                <div class="text-right">
+                                    <span id="summary-total-price" class="font-esports text-3xl sm:text-4xl font-bold bg-gradient-to-r from-neon-blue via-white to-neon-gold bg-clip-text text-transparent">
+                                        Rp 0
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="text-[11px] text-slate-400 mt-1 text-right">*Harga transparan sesuai pricelist resmi Anca Mart</p>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="space-y-3">
+                            <button type="button" id="btn-order-wa" onclick="orderViaWhatsApp()" 
+                                    class="w-full py-3.5 px-5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-dark-950 font-extrabold text-sm sm:text-base shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2.5 transition transform active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Order Sekarang via WhatsApp</span>
+                            </button>
+
+                            <button type="button" id="btn-copy-order" onclick="copyOrderDetails()" 
+                                    class="w-full py-3 px-4 rounded-xl bg-dark-800 hover:bg-dark-700 border border-white/15 text-slate-200 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition active:scale-[0.98]">
+                                <i class="fa-regular fa-copy text-neon-blue"></i>
+                                <span>Salin Rincian Order</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mini Info Card -->
+                    <div class="glass-card rounded-2xl p-4 flex items-center gap-3.5 border border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-neon-gold/15 border border-neon-gold/30 flex items-center justify-center text-neon-gold shrink-0">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div class="text-xs text-slate-300 leading-relaxed">
+                            Butuh paket custom atau joki winrate / MCL? Langsung hubungi admin di <a href="https://wa.me/6283193617371" target="_blank" class="text-neon-blue font-semibold hover:underline">+62 831-9361-7371</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 border-t border-white/10 bg-dark-900/90 py-8 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-center sm:text-left">
+                <div class="flex items-center justify-center sm:justify-start gap-2.5 mb-1.5">
+                    <span class="font-esports font-bold text-xl tracking-wider text-white">ANCA MART</span>
+                    <span class="text-xs px-2 py-0.5 rounded bg-neon-blue/15 text-neon-blue border border-neon-blue/30 font-semibold">MLBB JOKI</span>
+                </div>
+                <p class="text-xs text-slate-400">Joki Rank Mobile Legends Murah, Aman, Cepat &amp; Terpercaya.</p>
+            </div>
+
+            <!-- Social & Contact Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-3">
+                <a href="https://wa.me/6283193617371" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold transition">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>+62 831-9361-7371</span>
+                </a>
+                <a href="https://instagram.com/anca_mart" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-pink-500/15 hover:bg-pink-500/25 border border-pink-500/30 text-pink-400 text-xs sm:text-sm font-semibold transition">
+                    <i class="fa-brands fa-instagram text-base"></i>
+                    <span>@anca_mart</span>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-6 pt-6 border-t border-white/5 text-center text-[11px] text-slate-500">
+            &copy; <span id="year-now"></span> Anca Mart. All rights reserved. Mobile Legends: Bang Bang is a trademark of Moonton.
+        </div>
+    </footer>
+
+    <!-- Toast Notification (Replacement for alert) -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="glass-card border border-neon-blue/50 shadow-neon-blue px-4 py-3 rounded-xl flex items-center gap-3 text-sm text-white">
+            <div class="w-7 h-7 rounded-lg bg-neon-blue/20 text-neon-blue flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <span id="toast-message" class="font-medium">Rincian order berhasil disalin!</span>
+        </div>
+    </div>
+
+    <!-- JavaScript Calculation Engine -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year-now').textContent = new Date().getFullYear();
+
+        // Pricing Constants based on Anca Mart Pricelist
+        const PRICING = {
+            master_epic: { name: 'Master - Epic', price: 3000, badgeColor: 'text-cyan-400' },
+            legend: { name: 'Legends', price: 5000, badgeColor: 'text-amber-400' },
+            mythic_romawi: { name: 'Mythic Romawi (1-49★)', price: 10000, badgeColor: 'text-purple-400' },
+            mythical_glory: { name: 'Mythical Glory (50+★)', price: 15000, badgeColor: 'text-neon-gold' }
+        };
+
+        /**
+         * Rank Ladder Definition (Cumulative Star Coordinate System)
+         * Every rank tier has an absolute base star coordinate so cross-tier star traversal is 100% exact:
+         * - Master IV..I: 4 stars per division (total 16 stars: 0 to 16)
+         * - Grandmaster V..I: 5 stars per division (total 25 stars: 16 to 41)
+         * - Epic V..I: 5 stars per division (total 25 stars: 41 to 66)
+         * - Legend V..I: 5 stars per division (total 25 stars: 66 to 91)
+         * - Mythic Romawi (1-24★) & Mythical Honor (25-49★): starts at base 91 + star count (1 to 49 => abs 92 to 140)
+         * - Mythical Glory (50+★): starts at base 91 + star count (50+ => abs 141+)
+         * 
+         * Tier Price Boundaries (Absolute Star Index s from 1 to infinity):
+         * - s in [1 .. 66]   => Master - Epic (Rp 3.000/star)
+         * - s in [67 .. 91]  => Legend (Rp 5.000/star)
+         * - s in [92 .. 140] => Mythic Romawi & Mythical Honor 1-49★ (Rp 10.000/star)
+         * - s >= 141         => Mythical Glory 50+★ (Rp 15.000/star)
+         */
+        const RANKS = [
+            { id: 'master_4', name: 'Master IV', base: 0, maxStars: 4, isMythic: false },
+            { id: 'master_3', name: 'Master III', base: 4, maxStars: 4, isMythic: false },
+            { id: 'master_2', name: 'Master II', base: 8, maxStars: 4, isMythic: false },
+            { id: 'master_1', name: 'Master I', base: 12, maxStars: 4, isMythic: false },
+
+            { id: 'gm_5', name: 'Grandmaster V', base: 16, maxStars: 5, isMythic: false },
+            { id: 'gm_4', name: 'Grandmaster IV', base: 21, maxStars: 5, isMythic: false },
+            { id: 'gm_3', name: 'Grandmaster III', base: 26, maxStars: 5, isMythic: false },
+            { id: 'gm_2', name: 'Grandmaster II', base: 31, maxStars: 5, isMythic: false },
+            { id: 'gm_1', name: 'Grandmaster I', base: 36, maxStars: 5, isMythic: false },
+
+            { id: 'epic_5', name: 'Epic V', base: 41, maxStars: 5, isMythic: false },
+            { id: 'epic_4', name: 'Epic IV', base: 46, maxStars: 5, isMythic: false },
+            { id: 'epic_3', name: 'Epic III', base: 51, maxStars: 5, isMythic: false },
+            { id: 'epic_2', name: 'Epic II', base: 56, maxStars: 5, isMythic: false },
+            { id: 'epic_1', name: 'Epic I', base: 61, maxStars: 5, isMythic: false },
+
+            { id: 'legend_5', name: 'Legend V', base: 66, maxStars: 5, isMythic: false },
+            { id: 'legend_4', name: 'Legend IV', base: 71, maxStars: 5, isMythic: false },
+            { id: 'legend_3', name: 'Legend III', base: 76, maxStars: 5, isMythic: false },
+            { id: 'legend_2', name: 'Legend II', base: 81, maxStars: 5, isMythic: false },
+            { id: 'legend_1', name: 'Legend I', base: 86, maxStars: 5, isMythic: false },
+
+            { id: 'mythic_romawi', name: 'Mythic Romawi / Honor (1 - 49★)', base: 91, minStars: 1, maxStars: 49, isMythic: true },
+            { id: 'mythical_glory', name: 'Mythical Glory (50+★)', base: 91, minStars: 50, maxStars: 999, isMythic: true }
+        ];
+
+        // Application State
+        let currentMode = 'rank_to_rank'; // 'rank_to_rank' | 'per_star'
+        let currentOrderSummary = {
+            valid: true,
+            modeLabel: '',
+            routeLabel: '',
+            totalStars: 0,
+            totalPrice: 0,
+            breakdown: []
+        };
+        let displayedPrice = 0;
+        let animationFrameId = null;
+
+        // Format Rupiah Currency
+        function formatRupiah(amount) {
+            return 'Rp ' + amount.toLocaleString('id-ID');
+        }
+
+        // Smooth Number Counter Animation for Price
+        function animatePrice(targetPrice) {
+            if (animationFrameId) cancelAnimationFrame(animationFrameId);
+            const startPrice = displayedPrice;
+            const diff = targetPrice - startPrice;
+            const duration = 260; // ms
+            const startTime = performance.now();
+            const el = document.getElementById('summary-total-price');
+
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Ease out quad
+                const ease = 1 - (1 - progress) * (1 - progress);
+                displayedPrice = Math.round(startPrice + diff * ease);
+                el.textContent = formatRupiah(displayedPrice);
+
+                if (progress < 1) {
+                    animationFrameId = requestAnimationFrame(step);
+                } else {
+                    displayedPrice = targetPrice;
+                    el.textContent = formatRupiah(targetPrice);
+                }
+            }
+            animationFrameId = requestAnimationFrame(step);
+        }
+
+        // Initialize Rank Dropdowns
+        function initRankDropdowns() {
+            const startSelect = document.getElementById('start-rank');
+            const targetSelect = document.getElementById('target-rank');
+
+            RANKS.forEach(rank => {
+                const optStart = document.createElement('option');
+                optStart.value = rank.id;
+                optStart.textContent = rank.name;
+                startSelect.appendChild(optStart);
+
+                const optTarget = document.createElement('option');
+                optTarget.value = rank.id;
+                optTarget.textContent = rank.name;
+                targetSelect.appendChild(optTarget);
+            });
+
+            // Default user-friendly selection: Epic II ★3 -> Legend IV ★2
+            startSelect.value = 'epic_2';
+            renderStarInput('start', 3);
+
+            targetSelect.value = 'legend_4';
+            renderStarInput('target', 2);
+        }
+
+        // Render Dynamic Star Input (Dropdown for Master-Legend, Number Input for Mythic)
+        function renderStarInput(prefix, defaultValue = null) {
+            const rankId = document.getElementById(`${prefix}-rank`).value;
+            const rank = RANKS.find(r => r.id === rankId);
+            const wrapper = document.getElementById(`${prefix}-star-wrapper`);
+            const label = document.getElementById(`${prefix}-star-label`);
+
+            if (!rank.isMythic) {
+                label.textContent = prefix === 'start' ? 'Bintang Awal' : 'Bintang Tujuan';
+                let optionsHtml = '';
+                // Star 0 up to maxStars
+                for (let i = 0; i <= rank.maxStars; i++) {
+                    const selected = (defaultValue !== null && defaultValue === i) ? 'selected' : '';
+                    optionsHtml += `<option value="${i}" ${selected}>★ ${i} Bintang</option>`;
+                }
+                wrapper.innerHTML = `
+                    <select id="${prefix}-star" onchange="calculateAll()" class="w-full bg-dark-900 border border-white/15 focus:border-neon-blue rounded-xl px-3.5 py-3 text-sm text-white outline-none transition">
+                        ${optionsHtml}
+                    </select>
+                `;
+            } else {
+                label.textContent = prefix === 'start' ? 'Jml Bintang Mythic' : 'Target Bintang Mythic';
+                const val = defaultValue !== null ? defaultValue : rank.minStars;
+                wrapper.innerHTML = `
+                    <input type="number" id="${prefix}-star" value="${val}" min="${rank.minStars}" max="${rank.maxStars}" oninput="calculateAll()"
+                           class="w-full bg-dark-900 border border-white/15 focus:border-neon-blue rounded-xl px-3.5 py-3 text-sm text-white font-semibold outline-none transition">
+                `;
+            }
+        }
+
+        function handleStartRankChange() {
+            const rankId = document.getElementById('start-rank').value;
+            const rank = RANKS.find(r => r.id === rankId);
+            renderStarInput('start', rank.isMythic ? rank.minStars : 1);
+            calculateAll();
+        }
+
+        function handleTargetRankChange() {
+            const rankId = document.getElementById('target-rank').value;
+            const rank = RANKS.find(r => r.id === rankId);
+            renderStarInput('target', rank.isMythic ? rank.minStars : 3);
+            calculateAll();
+        }
+
+        // Switch between Mode A (Rank to Rank) and Mode B (Per Star)
+        function switchMode(mode) {
+            currentMode = mode;
+            const tabA = document.getElementById('tab-rank-to-rank');
+            const tabB = document.getElementById('tab-per-star');
+            const panelA = document.getElementById('panel-rank-to-rank');
+            const panelB = document.getElementById('panel-per-star');
+
+            if (mode === 'rank_to_rank') {
+                tabA.className = 'py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-neon-blue to-neon-purple text-dark-950 shadow-neon-blue';
+                tabB.className = 'py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-white/5';
+                panelA.classList.remove('hidden');
+                panelB.classList.add('hidden');
+            } else {
+                tabB.className = 'py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all bg-gradient-to-r from-neon-blue to-neon-purple text-dark-950 shadow-neon-blue';
+                tabA.className = 'py-3 px-4 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all text-slate-300 hover:text-white hover:bg-white/5';
+                panelB.classList.remove('hidden');
+                panelA.classList.add('hidden');
+            }
+            calculateAll();
+        }
+
+        // Quick Select from Price List Cards
+        function quickSelectTier(tierKey) {
+            switchMode('per_star');
+            document.getElementById('eceran-tier').value = tierKey;
+            calculateAll();
+            document.getElementById('kalkulator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Eceran Star Counter Helpers
+        function adjustEceranStars(delta) {
+            const input = document.getElementById('eceran-stars');
+            let val = parseInt(input.value, 10) || 1;
+            val = Math.max(1, Math.min(500, val + delta));
+            input.value = val;
+            calculateAll();
+        }
+
+        function setEceranStars(val) {
+            document.getElementById('eceran-stars').value = val;
+            calculateAll();
+        }
+
+        // Determine Pricing Category for each individual star step (1-indexed absolute star)
+        function getCategoryForStarStep(absStar) {
+            if (absStar <= 66) return 'master_epic';       // Master IV (0) .. Epic I Max (66)
+            if (absStar <= 91) return 'legend';            // Legend V (67) .. Legend I Max (91)
+            if (absStar <= 140) return 'mythic_romawi';    // Mythic 1★ (92) .. Mythic 49★ (140)
+            return 'mythical_glory';                       // Mythic 50+★ (141+)
+        }
+
+        // Main Calculation Logic
+        function calculateAll() {
+            const errorBox = document.getElementById('rank-error-box');
+            const errorText = document.getElementById('rank-error-text');
+            const btnOrder = document.getElementById('btn-order-wa');
+
+            if (currentMode === 'rank_to_rank') {
+                const startRank = RANKS.find(r => r.id === document.getElementById('start-rank').value);
+                const targetRank = RANKS.find(r => r.id === document.getElementById('target-rank').value);
+                const startStarEl = document.getElementById('start-star');
+                const targetStarEl = document.getElementById('target-star');
+
+                let startStar = parseInt(startStarEl.value, 10);
+                let targetStar = parseInt(targetStarEl.value, 10);
+
+                // Guard NaN or bounds on Mythic number inputs
+                if (isNaN(startStar)) startStar = startRank.isMythic ? startRank.minStars : 0;
+                if (isNaN(targetStar)) targetStar = targetRank.isMythic ? targetRank.minStars : 1;
+
+                if (startRank.isMythic) {
+                    startStar = Math.max(startRank.minStars, Math.min(startRank.maxStars, startStar));
+                }
+                if (targetRank.isMythic) {
+                    targetStar = Math.max(targetRank.minStars, Math.min(targetRank.maxStars, targetStar));
+                }
+
+                const startAbs = startRank.base + startStar;
+                const targetAbs = targetRank.base + targetStar;
+
+                const startDisplay = startRank.isMythic 
+                    ? `${startRank.id === 'mythical_glory' ? 'Mythical Glory' : 'Mythic'} (★${startStar})` 
+                    : `${startRank.name} (★${startStar})`;
+                const targetDisplay = targetRank.isMythic 
+                    ? `${targetRank.id === 'mythical_glory' ? 'Mythical Glory' : 'Mythic'} (★${targetStar})` 
+                    : `${targetRank.name} (★${targetStar})`;
+
+                if (targetAbs <= startAbs) {
+                    errorBox.classList.remove('hidden');
+                    errorText.textContent = `Target (${targetDisplay}) harus lebih tinggi dari Rank Awal (${startDisplay}).`;
+                    btnOrder.disabled = true;
+
+                    currentOrderSummary = {
+                        valid: false,
+                        modeLabel: 'Rank ke Rank',
+                        routeLabel: `${startDisplay} ➔ ${targetDisplay}`,
+                        totalStars: 0,
+                        totalPrice: 0,
+                        breakdown: []
+                    };
+                    renderSummaryUI();
+                    return;
+                }
+
+                // Valid range
+                errorBox.classList.add('hidden');
+                btnOrder.disabled = false;
+
+                // Count stars per pricing tier step-by-step
+                const counts = {
+                    master_epic: 0,
+                    legend: 0,
+                    mythic_romawi: 0,
+                    mythical_glory: 0
+                };
+
+                for (let s = startAbs + 1; s <= targetAbs; s++) {
+                    const cat = getCategoryForStarStep(s);
+                    counts[cat]++;
+                }
+
+                const breakdown = [];
+                let totalStars = 0;
+                let totalPrice = 0;
+
+                Object.keys(PRICING).forEach(key => {
+                    if (counts[key] > 0) {
+                        const subPrice = counts[key] * PRICING[key].price;
+                        totalStars += counts[key];
+                        totalPrice += subPrice;
+                        breakdown.push({
+                            key,
+                            name: PRICING[key].name,
+                            stars: counts[key],
+                            unitPrice: PRICING[key].price,
+                            subtotal: subPrice,
+                            badgeColor: PRICING[key].badgeColor
+                        });
+                    }
+                });
+
+                currentOrderSummary = {
+                    valid: true,
+                    modeLabel: 'Rank ke Rank',
+                    routeLabel: `${startDisplay} ➔ ${targetDisplay}`,
+                    totalStars,
+                    totalPrice,
+                    breakdown
+                };
+                renderSummaryUI();
+
+            } else {
+                // Mode B: Eceran / Per Bintang
+                errorBox.classList.add('hidden');
+                btnOrder.disabled = false;
+
+                const tierKey = document.getElementById('eceran-tier').value;
+                const starsInput = document.getElementById('eceran-stars');
+                let stars = parseInt(starsInput.value, 10);
+                if (isNaN(stars) || stars < 1) stars = 1;
+
+                const tierInfo = PRICING[tierKey];
+                const totalPrice = stars * tierInfo.price;
+
+                currentOrderSummary = {
+                    valid: true,
+                    modeLabel: 'Eceran / Per Bintang',
+                    routeLabel: `${tierInfo.name} (+${stars} Bintang)`,
+                    totalStars: stars,
+                    totalPrice,
+                    breakdown: [{
+                        key: tierKey,
+                        name: tierInfo.name,
+                        stars: stars,
+                        unitPrice: tierInfo.price,
+                        subtotal: totalPrice,
+                        badgeColor: tierInfo.badgeColor
+                    }]
+                };
+                renderSummaryUI();
+            }
+        }
+
+        // Render Summary Card on Right Column
+        function renderSummaryUI() {
+            document.getElementById('summary-mode').textContent = currentOrderSummary.modeLabel;
+            document.getElementById('summary-route').textContent = currentOrderSummary.routeLabel;
+            document.getElementById('summary-total-stars').textContent = `${currentOrderSummary.totalStars} Bintang`;
+
+            const breakdownContainer = document.getElementById('breakdown-list');
+            if (!currentOrderSummary.valid || currentOrderSummary.breakdown.length === 0) {
+                breakdownContainer.innerHTML = `
+                    <div class="text-slate-500 italic text-xs py-2">Pilih rank tujuan yang lebih tinggi untuk melihat rincian biaya.</div>
+                `;
+                animatePrice(0);
+                return;
+            }
+
+            breakdownContainer.innerHTML = currentOrderSummary.breakdown.map(item => `
+                <div class="flex items-center justify-between bg-dark-900/80 border border-white/10 rounded-xl px-3 py-2.5">
+                    <div>
+                        <span class="font-bold ${item.badgeColor} block text-xs sm:text-sm">${item.name}</span>
+                        <span class="text-[11px] text-slate-400">${item.stars} ★ × ${formatRupiah(item.unitPrice)}</span>
+                    </div>
+                    <span class="font-bold text-white text-xs sm:text-sm">${formatRupiah(item.subtotal)}</span>
+                </div>
+            `).join('');
+
+            animatePrice(currentOrderSummary.totalPrice);
+        }
+
+        // Generate Formatted WhatsApp / Clipboard Message
+        function buildOrderMessage() {
+            const nickname = document.getElementById('input-nickname').value.trim() || '-';
+            const loginVia = document.getElementById('input-login').value;
+            const reqHero = document.getElementById('input-hero').value.trim() || 'Bebas';
+            const notes = document.getElementById('input-notes').value.trim() || '-';
+
+            const breakdownLines = currentOrderSummary.breakdown.map(item => 
+                `• ${item.name}: ${item.stars} ★ × ${formatRupiah(item.unitPrice)} = ${formatRupiah(item.subtotal)}`
+            ).join('\n');
+
+            return [
+                `*ORDER JOKI RANK MLBB — ANCA MART*`,
+                `----------------------------------`,
+                `*Mode:* ${currentOrderSummary.modeLabel}`,
+                `*Target:* ${currentOrderSummary.routeLabel}`,
+                `*Total Bintang:* ${currentOrderSummary.totalStars} Bintang`,
+                ``,
+                `*Rincian Biaya:*`,
+                breakdownLines,
+                ``,
+                `*TOTAL BAYAR:* *${formatRupiah(currentOrderSummary.totalPrice)}*`,
+                `----------------------------------`,
+                `*Data Akun & Request:*`,
+                `• Nickname/ID: ${nickname}`,
+                `• Login Via: ${loginVia}`,
+                `• Request Hero: ${reqHero}`,
+                `• Catatan: ${notes}`,
+                `----------------------------------`,
+                `Halo Admin Anca Mart, saya ingin order joki dengan rincian di atas. Mohon info pembayarannya ya!`
+            ].join('\n');
+        }
+
+        // Open WhatsApp with Pre-filled Message
+        function orderViaWhatsApp() {
+            if (!currentOrderSummary.valid) {
+                showToast('Pastikan pilihan rank tujuan sudah valid!');
+                return;
+            }
+            const text = buildOrderMessage();
+            const encodedText = encodeURIComponent(text);
+            const waUrl = `https://wa.me/6283193617371?text=${encodedText}`;
+            window.open(waUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Copy Order Details to Clipboard (using safe textarea fallback for iframe compatibility)
+        function copyOrderDetails() {
+            if (!currentOrderSummary.valid) {
+                showToast('Pastikan pilihan rank tujuan sudah valid!');
+                return;
+            }
+            const text = buildOrderMessage();
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Rincian order berhasil disalin ke clipboard!');
+            } catch (err) {
+                showToast('Gagal menyalin teks, silakan gunakan tombol WhatsApp.');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function updateOrderPreview() {
+            // Keeps inputs reactive if needed in future expansions
+        }
+
+        // Toast Notification Helper
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            const msgEl = document.getElementById('toast-message');
+            msgEl.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+
+        // Boot up on load
+        window.addEventListener('DOMContentLoaded', () => {
+            initRankDropdowns();
+            calculateAll();
+        });
+    </script>
+</body>
+</html>
+```
